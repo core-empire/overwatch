@@ -1,0 +1,2 @@
+exclude: ['node_modules', 'css', '_scss']
+keep_files: ['_site/css']
