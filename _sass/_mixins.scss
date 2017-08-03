@@ -18,6 +18,14 @@
 /// @group sass-css3-mixins
 ////
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 
 /// Adds a browser prefix to the property
 /// @param {*} $property Property

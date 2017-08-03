@@ -19,10 +19,65 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+a {
+	outline: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	color: black;
 	font-family: $font-secondary;
 	font-weight: 600;
+}
+
+.site-nav {
+	border-bottom: 1px solid $color-divider;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 60px 0;
+
+	nav {
+		@include clearfix();
+
+		margin: 0 auto;
+		max-width: 860px;
+
+		.logo {
+			float: left;
+		}
+
+		.social {
+			float: right;
+
+			li {
+				padding: 0 8px;
+
+				&:first-of-type {
+					padding-left: 0;
+				}
+
+				&:last-of-type {
+					paddig-right: 0;
+				}
+
+				a {
+					@include transition();
+
+					opacity: 0.4;
+					padding: 10px;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li,
+			a {
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+	}
 }
 
 .button {
