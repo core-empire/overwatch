@@ -1,0 +1,359 @@
+@import "reset";
+@import "config";
+@import "mixins";
+
+*,
+*:after,
+*:before {
+	@include box-sizing();
+}
+
+body {
+	color: $color-primary-soft;
+	font-family: $font-primary;
+	font-size: $type-scale-base;
+	line-height: 1.5;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	outline: none;
+}
+
+a:not(.button) {
+	@include transition();
+
+	color: $color-primary;
+	font-weight: 600;
+	opacity: 1;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+em {
+	font-style: italic;
+}
+
+*::selection {
+    color: white;
+    background: $color-primary;
+}
+
+*::-moz-selection {
+    color: white;
+    background: $color-primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	font-family: $font-secondary;
+	font-weight: 600;
+}
+
+.site-nav,
+.site-footer {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 60px 0;
+}
+
+.site-nav {
+	border-bottom: 1px solid $color-divider;
+
+	nav {
+		@include clearfix();
+
+		margin: 0 auto;
+		max-width: 860px;
+
+		.logo {
+			float: left;
+		}
+
+		.social {
+			float: right;
+
+			li {
+				padding: 0 8px;
+
+				&:first-of-type {
+					padding-left: 0;
+				}
+
+				&:last-of-type {
+					paddig-right: 0;
+				}
+
+				a {
+					@include transition();
+
+					opacity: 0.4;
+					padding: 10px;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li,
+			a {
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+	}
+}
+
+.site-footer {
+	font-weight: 600;
+	text-align: center;
+
+	em {
+		color: $color-primary-vibrant;
+	}
+
+	.copyright {
+		font-size: $type-scale-tiny;
+	}
+}
+
+.footer-divider {
+	display: block;
+	margin: 30px auto 0 auto;
+}
+
+.button {
+	$height: 56px;
+
+	@include border-radius(60px);
+	@include transition();
+
+	border-color: $color-primary;
+	border-style: solid;
+	border-width: 2px;
+	color: $color-primary;
+	display: inline-block;
+	font-weight: 600;
+	height: $height;
+	line-height: $height;
+	padding: 0 20px;
+	position: relative;
+	min-width: 150px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: $color-primary;
+		color: white;
+
+		&:after {
+			background: url('../assets/button-arrow-white.png') no-repeat;
+		}
+	}
+
+	&:after {
+		$height: 8px;
+
+		background: url('../assets/button-arrow-color.png') no-repeat;
+		content: '';
+		display: inline-block;
+		height: $height;
+		margin-top: -($height / 2);
+		opacity: 0.7;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		width: 16px;
+	}
+}
+
+.button-join {
+	text-indent: -10px;
+
+	&:hover {
+		text-indent: -7px;
+
+		&:before {
+			background: url('../assets/button-discord-white.png') no-repeat;
+		}
+	}
+
+	&:before {
+		$height: 24px;
+
+		background: url('../assets/button-discord-color.png') no-repeat;
+		content: '';
+		display: inline-block;
+		height: $height;
+		left: 15px;
+		margin-top: -($height / 2) + 2;
+		position: absolute;
+		top: 50%;
+		width: 21px;
+	}
+}
+
+.button-large {
+	@include border-radius(100px);
+
+	border-width: 4px;
+	display: block;
+	height: auto;
+	line-height: 1;
+	padding: 30px 40px;
+	margin: 0 auto;
+	max-width: 340px;
+
+	&:after {
+		right: 30px;
+	}
+
+	span {
+		display: block;
+	}
+
+	.button--text-primary {
+		font-family: $font-secondary;
+		font-size: 17px;
+		font-weight: 800;
+		margin-bottom: 5px;
+	}
+
+	.button--text-secondary {
+		color: $color-primary-vibrant;
+		font-style: italic;
+		text-transform: none;
+	}
+}
+
+.button-wrapper {
+	position: relative;
+	
+	span {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+	}
+}
+
+.main-wrapper {
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.hero {
+	.callout {
+		color: $color-primary;
+		font-size: $type-scale-massive;
+		line-height: 1.2;
+		padding: 100px 0;
+		text-align: center;
+
+		.callout-offset {
+			position: relative;
+
+			span {
+				color: $color-secondary;
+				font-size: $type-scale-base;
+				font-style: italic;
+				font-weight: 800;
+				letter-spacing: 1px;
+				line-height: 1;
+				position: absolute;
+				text-transform: uppercase;
+			}
+
+			&.callout-offset-bottom {
+				span {
+					bottom: -2px;
+					right: 0;
+				}
+			}
+
+			&.callout-offset-top {
+				span {
+					left: 0;
+					top: -2px;
+				}
+			}
+		}
+
+		span {
+			display: inline-block;
+		}
+	}
+}
+
+.servers {
+	margin: 0 auto;
+	max-width: 580px;
+
+	.server {
+		$padding-top: 60px;
+		padding: $padding-top 180px $padding-top 100px;
+		position: relative;
+
+		&:before {
+			background-repeat: no-repeat;
+			content: '';
+			display: inline-block;
+			left: 0;
+			height: 70px;
+			position: absolute;
+			top: $padding-top + 10;
+			width: 61px;
+		}
+
+		&:after {
+			$size: 250px;
+
+			background-color: $color-divider;
+			bottom: 0;
+			content: '';
+			height: 1px;
+			position: absolute;
+			width: $size;
+			left: 50%;
+			margin-left: -($size / 2);
+		}
+
+		&:last-of-type:after {
+			display: none;
+		}
+
+		&.server--teams:before {
+			background: url('../assets/core-teams.png');
+		}
+
+		&.server--scrim:before {
+			background: url('../assets/core-scrim.png');
+		}
+
+		&.server--league:before {
+			background: url('../assets/core-league.png');
+		}
+
+		h2 {
+			font-size: $type-scale-david;
+			margin-bottom: 10px;
+		}
+
+		.button-wrapper {
+			position: absolute;
+			right: 0;
+			top: $padding-top + 14;
+
+			span {
+				font-size: $type-scale-tiny;
+				font-weight: 600;
+			}
+		}
+	}
+}
