@@ -30,6 +30,9 @@
 		{% endif %}
 	</head>
 	<body>
-		{{ content }}
+		<div class="site-wrapper">
+			{% include navigation.html %}
+			{{ content }}
+		</div>
 	</body>
 </html>
