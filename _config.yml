@@ -1,2 +1,14 @@
-exclude: ['node_modules', 'css', '_scss']
+title: CORE Overwatch
+description: Find or build the Overwatch team team for you.
+
+baseurl: _site
+url: http://coreoverwatch.com
+
+dev_environment: false
+typekit: true
+
+google_analytics:
+  account: UA-103948438-1
+
+exclude: ['README.md', 'CNAME', 'Gruntfile.js', 'package.json', 'node_modules', 'css', '_scss']
 keep_files: ['_site/css']
