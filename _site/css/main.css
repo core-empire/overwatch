@@ -184,7 +184,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer {
   font-weight: 600;
-  margin-top: 60px;
   text-align: center;
 }
 
@@ -194,6 +193,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-footer .copyright {
   font-size: 13px;
+}
+
+.footer-divider {
+  display: block;
+  margin: 30px auto 0 auto;
 }
 
 .button {
