@@ -1,7 +1,7 @@
 title: CORE Overwatch
 description: Find or build the Overwatch team team for you.
 
-baseurl: 
+baseurl: _site
 url: http://coreoverwatch.com
 
 dev_environment: false
