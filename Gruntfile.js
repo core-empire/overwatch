@@ -24,13 +24,15 @@ module.exports = function (grunt) {
             sass: {
                 files: ['_sass/*.{scss,sass}', '_sass/**/*.{scss,sass}'],
                 tasks: ['sass'],
-            }
+            },
+
+            livereload: {
+                options: { livereload: true },
+                files: ['_site/**/*'],
+            },
         },
 
-        livereload: {
-            options: { livereload: true },
-            files: ['dest/**/*'],
-        },
+        
 
         // sass (libsass) config
         sass: {
