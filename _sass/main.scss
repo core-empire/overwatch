@@ -1,11 +1,66 @@
 @import "reset";
 @import "config";
+@import "mixins";
 
 body {
 	font-family: $font-primary;
-	font-size: 100%;
+	font-size: $type-scale-base;
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-secondary;
+	font-weight: 600;
+}
+
+.main-wrapper {
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.hero {
+	.callout {
+		font-size: $type-scale-massive;
+		text-align: center;
+
+		.callout-offset {
+			position: relative;
+
+			span {
+				font-size: $type-scale-base;
+				font-style: italic;
+				font-weight: 800;
+				letter-spacing: 1px;
+				position: absolute;
+				text-transform: uppercase;
+			}
+
+			&.callout-offset-bottom {
+				span {
+					bottom: -10px;
+					right: 0;
+				}
+			}
+
+			&.callout-offset-top {
+				span {
+					left: 0;
+					top: -10px;
+				}
+			}
+		}
+
+		span {
+			display: inline-block;
+		}
+	}
+}
+
+.servers {
+	h2 {
+		font-size: $type-scale-david;
+	}
 }

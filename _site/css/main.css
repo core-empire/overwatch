@@ -46,8 +46,54 @@ table {
 /* ////////// T Y P E ////////// */
 body {
   font-family: "proxima-nova", "Helvetica", "Arial", "sans-serif";
-  font-size: 100%;
+  font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "niveau-grotesk", "Helvetica", "Arial", "sans-serif";
+  font-weight: 600;
+}
+
+.main-wrapper {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.hero .callout {
+  font-size: 117px;
+  text-align: center;
+}
+
+.hero .callout .callout-offset {
+  position: relative;
+}
+
+.hero .callout .callout-offset span {
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 1px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.hero .callout .callout-offset.callout-offset-bottom span {
+  bottom: -10px;
+  right: 0;
+}
+
+.hero .callout .callout-offset.callout-offset-top span {
+  left: 0;
+  top: -10px;
+}
+
+.hero .callout span {
+  display: inline-block;
+}
+
+.servers h2 {
+  font-size: 23px;
 }
