@@ -57,9 +57,21 @@ table {
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "proxima-nova", "Helvetica", "Arial", "sans-serif";
   font-size: 15px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -70,13 +82,81 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+.button {
+  -webkit-border-radius: 60px;
+  -khtml-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  -o-border-radius: 60px;
+  border-radius: 60px;
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  font-weight: 600;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 20px;
+  min-width: 150px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-large {
+  -webkit-border-radius: 100px;
+  -khtml-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  border-radius: 100px;
+  border-width: 4px;
+  display: block;
+  height: auto;
+  line-height: 1;
+  padding: 30px 40px;
+  margin: 0 auto;
+  max-width: 340px;
+}
+
+.button-large span {
+  display: block;
+}
+
+.button-large .button--text-primary {
+  font-family: "niveau-grotesk", "Helvetica", "Arial", "sans-serif";
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.button-large .button--text-secondary {
+  font-style: italic;
+  text-transform: none;
+}
+
+.button-wrapper {
+  position: relative;
+}
+
+.button-wrapper span {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
 .main-wrapper {
   margin: 0 auto;
   max-width: 700px;
 }
 
+.hero {
+  margin-bottom: 60px;
+}
+
 .hero .callout {
   font-size: 117px;
+  line-height: 1;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -107,6 +187,39 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
-.servers h2 {
+.servers {
+  margin: 0 auto;
+  max-width: 580px;
+}
+
+.servers .server {
+  padding: 60px 180px 60px 100px;
+  position: relative;
+}
+
+.servers .server:after {
+  background-color: #e8e8e8;
+  bottom: 0;
+  content: '';
+  height: 2px;
+  position: absolute;
+  width: 250px;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.servers .server h2 {
   font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.servers .server .button-wrapper {
+  position: absolute;
+  right: 0;
+  top: 74px;
+}
+
+.servers .server .button-wrapper span {
+  font-size: 13px;
+  font-weight: 600;
 }
