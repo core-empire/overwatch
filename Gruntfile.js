@@ -23,8 +23,13 @@ module.exports = function (grunt) {
         watch: {
             sass: {
                 files: ['_sass/*.{scss,sass}', '_sass/**/*.{scss,sass}'],
-                tasks: ['sass']
+                tasks: ['sass'],
             }
+        },
+
+        livereload: {
+            options: { livereload: true },
+            files: ['dest/**/*'],
         },
 
         // sass (libsass) config

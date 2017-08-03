@@ -1,2 +1,9 @@
+title: CORE Overwatch
+description: Find or build the Overwatch team team for you.
+
+baseurl: 
+url: http://coreoverwatch.com
+
+dev_environment: true
 exclude: ['README.md', 'CNAME', 'Gruntfile.js', 'package.json', 'node_modules', 'css', '_scss']
 keep_files: ['_site/css']

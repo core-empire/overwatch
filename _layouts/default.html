@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+	<title>{{ site.title }}</title>
+	<meta name="description" content="{{ site.description }}" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
+
+	{% if site.dev_environment %}
+	<script src="//localhost:35729/livereload.js"></script>
+	{% endif %}
+</head>
+<body>
+ {{ content }}
+</body>
+</html>
