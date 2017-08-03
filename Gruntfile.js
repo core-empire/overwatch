@@ -27,7 +27,10 @@ module.exports = function (grunt) {
             },
 
             livereload: {
-                options: { livereload: true },
+                options: {
+                    livereload: true,
+                    keepAlive: true
+                },
                 files: ['_site/**/*'],
             },
         },
