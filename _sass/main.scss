@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 	$height: 56px;
 
 	@include border-radius(60px);
+	@include transition();
 
 	border-color: $color-primary;
 	border-style: solid;
@@ -39,10 +40,61 @@ h1, h2, h3, h4, h5, h6 {
 	height: $height;
 	line-height: $height;
 	padding: 0 20px;
+	position: relative;
 	min-width: 150px;
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
+
+	&:hover {
+		background-color: $color-primary;
+		color: white;
+
+		&:after {
+			background: url('../assets/button-arrow-white.png') no-repeat;
+		}
+	}
+
+	&:after {
+		$height: 8px;
+
+		background: url('../assets/button-arrow-color.png') no-repeat;
+		content: '';
+		display: inline-block;
+		height: $height;
+		margin-top: -($height / 2);
+		opacity: 0.7;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		width: 16px;
+	}
+}
+
+.button-join {
+	text-indent: -10px;
+
+	&:hover {
+		text-indent: -7px;
+
+		&:before {
+			background: url('../assets/button-discord-white.png') no-repeat;
+		}
+	}
+
+	&:before {
+		$height: 24px;
+
+		background: url('../assets/button-discord-color.png') no-repeat;
+		content: '';
+		display: inline-block;
+		height: $height;
+		left: 15px;
+		margin-top: -($height / 2) + 2;
+		position: absolute;
+		top: 50%;
+		width: 21px;
+	}
 }
 
 .button-large {
@@ -55,6 +107,10 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 30px 40px;
 	margin: 0 auto;
 	max-width: 340px;
+
+	&:after {
+		right: 30px;
+	}
 
 	span {
 		display: block;
@@ -95,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 	.callout {
 		color: $color-primary;
 		font-size: $type-scale-massive;
-		line-height: 1;
+		line-height: 1.2;
 		padding: 100px 0;
 		text-align: center;
 
@@ -108,13 +164,14 @@ h1, h2, h3, h4, h5, h6 {
 				font-style: italic;
 				font-weight: 800;
 				letter-spacing: 1px;
+				line-height: 1;
 				position: absolute;
 				text-transform: uppercase;
 			}
 
 			&.callout-offset-bottom {
 				span {
-					bottom: -10px;
+					bottom: -2px;
 					right: 0;
 				}
 			}
@@ -122,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 			&.callout-offset-top {
 				span {
 					left: 0;
-					top: -10px;
+					top: -2px;
 				}
 			}
 		}
