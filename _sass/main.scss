@@ -2,9 +2,16 @@
 @import "config";
 @import "mixins";
 
+*,
+*:after,
+*:before {
+	@include box-sizing();
+}
+
 body {
 	font-family: $font-primary;
 	font-size: $type-scale-base;
+	line-height: 1.5;
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -16,14 +23,74 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 }
 
+.button {
+	$height: 56px;
+
+	@include border-radius(60px);
+
+	border-style: solid;
+	border-width: 2px;
+	display: inline-block;
+	font-weight: 600;
+	height: $height;
+	line-height: $height;
+	padding: 0 20px;
+	min-width: 150px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button-large {
+	@include border-radius(100px);
+
+	border-width: 4px;
+	display: block;
+	height: auto;
+	line-height: 1;
+	padding: 30px 40px;
+	margin: 0 auto;
+	max-width: 340px;
+
+	span {
+		display: block;
+	}
+
+	.button--text-primary {
+		font-family: $font-secondary;
+		font-size: 17px;
+		font-weight: 800;
+		margin-bottom: 5px;
+	}
+
+	.button--text-secondary {
+		font-style: italic;
+		text-transform: none;
+	}
+}
+
+.button-wrapper {
+	position: relative;
+	
+	span {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+	}
+}
+
 .main-wrapper {
 	margin: 0 auto;
 	max-width: 700px;
 }
 
 .hero {
+	margin-bottom: 60px;
+	
 	.callout {
 		font-size: $type-scale-massive;
+		line-height: 1;
+		padding: 100px 0;
 		text-align: center;
 
 		.callout-offset {
@@ -60,7 +127,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .servers {
-	h2 {
-		font-size: $type-scale-david;
+	margin: 0 auto;
+	max-width: 580px;
+
+	.server {
+		$padding-top: 60px;
+		padding: $padding-top 180px $padding-top 100px;
+		position: relative;
+
+		&:after {
+			$size: 250px;
+
+			background-color: #e8e8e8;
+			bottom: 0;
+			content: '';
+			height: 2px;
+			position: absolute;
+			width: $size;
+			left: 50%;
+			margin-left: -($size / 2);
+		}
+
+		h2 {
+			font-size: $type-scale-david;
+			margin-bottom: 10px;
+		}
+
+		.button-wrapper {
+			position: absolute;
+			right: 0;
+			top: $padding-top + 14;
+
+			span {
+				font-size: $type-scale-tiny;
+				font-weight: 600;
+			}
+		}
 	}
 }
