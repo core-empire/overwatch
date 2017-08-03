@@ -83,17 +83,41 @@ a {
   outline: none;
 }
 
+a:not(.button) {
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  -khtml-transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+  -ms-transition: all 0.2s ease-in-out 0s;
+  -o-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  color: #6959bf;
+  font-weight: 600;
+  opacity: 1;
+}
+
+a:not(.button):hover {
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: black;
   font-family: "niveau-grotesk", "Helvetica", "Arial", "sans-serif";
   font-weight: 600;
 }
 
-.site-nav {
-  border-bottom: 1px solid #e8e6f4;
+.site-nav,
+.site-footer {
   margin: 0 auto;
   max-width: 1200px;
   padding: 60px 0;
+}
+
+.site-nav {
+  border-bottom: 1px solid #e8e6f4;
 }
 
 .site-nav nav {
@@ -146,6 +170,20 @@ h1, h2, h3, h4, h5, h6 {
 .site-nav nav .social a {
   vertical-align: middle;
   display: inline-block;
+}
+
+.site-footer {
+  font-weight: 600;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.site-footer em {
+  color: #9486e0;
+}
+
+.site-footer .copyright {
+  font-size: 13px;
 }
 
 .button {
@@ -275,10 +313,6 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 700px;
 }
 
-.hero {
-  margin-bottom: 60px;
-}
-
 .hero .callout {
   color: #6959bf;
   font-size: 117px;
@@ -337,6 +371,21 @@ h1, h2, h3, h4, h5, h6 {
   width: 61px;
 }
 
+.servers .server:after {
+  background-color: #e8e6f4;
+  bottom: 0;
+  content: '';
+  height: 1px;
+  position: absolute;
+  width: 250px;
+  left: 50%;
+  margin-left: -125px;
+}
+
+.servers .server:last-of-type:after {
+  display: none;
+}
+
 .servers .server.server--teams:before {
   background: url("../assets/core-teams.png");
 }
@@ -347,17 +396,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .servers .server.server--league:before {
   background: url("../assets/core-league.png");
-}
-
-.servers .server:after {
-  background-color: #e8e6f4;
-  bottom: 0;
-  content: '';
-  height: 2px;
-  position: absolute;
-  width: 250px;
-  left: 50%;
-  margin-left: -125px;
 }
 
 .servers .server h2 {
