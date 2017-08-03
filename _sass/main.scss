@@ -9,6 +9,7 @@
 }
 
 body {
+	color: $color-primary-soft;
 	font-family: $font-primary;
 	font-size: $type-scale-base;
 	line-height: 1.5;
@@ -19,6 +20,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+	color: black;
 	font-family: $font-secondary;
 	font-weight: 600;
 }
@@ -28,8 +30,10 @@ h1, h2, h3, h4, h5, h6 {
 
 	@include border-radius(60px);
 
+	border-color: $color-primary;
 	border-style: solid;
 	border-width: 2px;
+	color: $color-primary;
 	display: inline-block;
 	font-weight: 600;
 	height: $height;
@@ -64,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 
 	.button--text-secondary {
+		color: $color-primary-vibrant;
 		font-style: italic;
 		text-transform: none;
 	}
@@ -86,8 +91,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero {
 	margin-bottom: 60px;
-	
+
 	.callout {
+		color: $color-primary;
 		font-size: $type-scale-massive;
 		line-height: 1;
 		padding: 100px 0;
@@ -97,6 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 			position: relative;
 
 			span {
+				color: $color-secondary;
 				font-size: $type-scale-base;
 				font-style: italic;
 				font-weight: 800;
@@ -135,10 +142,33 @@ h1, h2, h3, h4, h5, h6 {
 		padding: $padding-top 180px $padding-top 100px;
 		position: relative;
 
+		&:before {
+			background-repeat: no-repeat;
+			content: '';
+			display: inline-block;
+			left: 0;
+			height: 70px;
+			position: absolute;
+			top: $padding-top + 10;
+			width: 61px;
+		}
+
+		&.server--teams:before {
+			background: url('../assets/core-teams.png');
+		}
+
+		&.server--scrim:before {
+			background: url('../assets/core-scrim.png');
+		}
+
+		&.server--league:before {
+			background: url('../assets/core-league.png');
+		}
+
 		&:after {
 			$size: 250px;
 
-			background-color: #e8e8e8;
+			background-color: $color-divider;
 			bottom: 0;
 			content: '';
 			height: 2px;

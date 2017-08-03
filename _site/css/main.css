@@ -44,6 +44,7 @@ table {
 }
 
 /* ////////// T Y P E ////////// */
+/* ////////// C O L O R ////////// */
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
   By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
@@ -69,6 +70,7 @@ table {
 }
 
 body {
+  color: #a29acb;
   font-family: "proxima-nova", "Helvetica", "Arial", "sans-serif";
   font-size: 15px;
   line-height: 1.5;
@@ -78,6 +80,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: black;
   font-family: "niveau-grotesk", "Helvetica", "Arial", "sans-serif";
   font-weight: 600;
 }
@@ -89,8 +92,10 @@ h1, h2, h3, h4, h5, h6 {
   -ms-border-radius: 60px;
   -o-border-radius: 60px;
   border-radius: 60px;
+  border-color: #6959bf;
   border-style: solid;
   border-width: 2px;
+  color: #6959bf;
   display: inline-block;
   font-weight: 600;
   height: 56px;
@@ -130,6 +135,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button-large .button--text-secondary {
+  color: #9486e0;
   font-style: italic;
   text-transform: none;
 }
@@ -154,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .callout {
+  color: #6959bf;
   font-size: 117px;
   line-height: 1;
   padding: 100px 0;
@@ -165,6 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero .callout .callout-offset span {
+  color: #23c5df;
   font-size: 15px;
   font-style: italic;
   font-weight: 800;
@@ -197,8 +205,31 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.servers .server:before {
+  background-repeat: no-repeat;
+  content: '';
+  display: inline-block;
+  left: 0;
+  height: 70px;
+  position: absolute;
+  top: 70px;
+  width: 61px;
+}
+
+.servers .server.server--teams:before {
+  background: url("../assets/core-teams.png");
+}
+
+.servers .server.server--scrim:before {
+  background: url("../assets/core-scrim.png");
+}
+
+.servers .server.server--league:before {
+  background: url("../assets/core-league.png");
+}
+
 .servers .server:after {
-  background-color: #e8e8e8;
+  background-color: #e8e6f4;
   bottom: 0;
   content: '';
   height: 2px;
