@@ -5,5 +5,10 @@ baseurl:
 url: http://coreoverwatch.com
 
 dev_environment: true
+typekit: true;
+
+google_analytics:
+  account: UA-103948438-1
+
 exclude: ['README.md', 'CNAME', 'Gruntfile.js', 'package.json', 'node_modules', 'css', '_scss']
 keep_files: ['_site/css']
