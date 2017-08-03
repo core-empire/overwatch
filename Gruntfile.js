@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = function (grunt) {
-
     // Show elapsed time after tasks run to visualize performance
     require('time-grunt')(grunt);
     // Load all Grunt tasks that are listed in package.json automagically
@@ -23,7 +22,7 @@ module.exports = function (grunt) {
         // watch for files to change and run tasks when they do
         watch: {
             sass: {
-                files: ['_sass/**/*.{scss,sass}'],
+                files: ['_sass/*.{scss,sass}', '_sass/**/*.{scss,sass}'],
                 tasks: ['sass']
             }
         },
@@ -31,7 +30,7 @@ module.exports = function (grunt) {
         // sass (libsass) config
         sass: {
             options: {
-                sourceMap: true,
+                sourceMap: false,
                 relativeAssets: false,
                 outputStyle: 'expanded',
                 sassDir: '_sass',
@@ -59,7 +58,6 @@ module.exports = function (grunt) {
                 logConcurrentOutput: true
             }
         },
-
     });
 
     // Register the grunt serve task
@@ -75,3 +73,4 @@ module.exports = function (grunt) {
 
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');
+}

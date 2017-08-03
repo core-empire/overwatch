@@ -1,2 +1,2 @@
-exclude: ['node_modules', 'css', '_scss']
+exclude: ['README.md', 'CNAME', 'Gruntfile.js', 'package.json', 'node_modules', 'css', '_scss']
 keep_files: ['_site/css']
