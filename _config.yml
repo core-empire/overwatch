@@ -4,8 +4,8 @@ description: Find or build the Overwatch team team for you.
 baseurl: 
 url: http://coreoverwatch.com
 
-dev_environment: true
-typekit: true;
+dev_environment: false
+typekit: true
 
 google_analytics:
   account: UA-103948438-1
