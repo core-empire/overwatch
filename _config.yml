@@ -1,8 +1,8 @@
 title: CORE Overwatch
 description: Find or build the Overwatch team team for you.
 
-baseurl: /overwatch
-url: http://core-empire.github.io
+baseurl:
+url: http://coreoverwatch.com
 
 dev_environment: false
 typekit: true
