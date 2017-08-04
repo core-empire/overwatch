@@ -1,6 +1,6 @@
-#README
+# README
 
-##Setup
+## Setup
 Download [*Node.js*](https://nodejs.org/)
 
 Clone the project to your local machine via:
@@ -9,7 +9,7 @@ SSH `git@github.com:core-empire/overwatch.git`
 
 Example `git clone https://github.com/core-empire/overwatch.git`
 
-##Workflow
+## Workflow
 Go to your local repository directory via command line and run
 `npm install` - this will install the node module dependencies for the project (this only needs to be run once)
 `grunt watch` - this will watch the project directory for changes (must be running any time you are working)
@@ -23,7 +23,7 @@ If you are going to publish something live, set `dev_environment` to `false` in 
 If you are working locally, be sure `dev_environment` is set to `true` in `_config.yml`.  
 
 
-##Policy
+## Policy
 Please do all development of the site on the `development` branch.
 If you want to merge local changes on your development branch with the remote `master` branch, do the following:
 - `git add ./` (Adds any untracked files to the working tree)
@@ -35,5 +35,5 @@ After that, go to our GitHub repo and make a pull request to merge `development`
 And if you want to send your build to the live site, do
 - `git subtree push --prefix _site origin gh-pages`
 
-###Warning
+### Warning
 THE CODEBASE SHOULD NEVER ARRIVE TO THE `gh-pages` BRANCH. ONLY THE **JEKYLL BUILD** SHOULD BE ON IT.  
