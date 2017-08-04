@@ -1,9 +1,9 @@
 # README
 
 ## Setup
-Download [*Node.js*](https://nodejs.org/)
+Download [*Node.js*](https://nodejs.org/)  
 
-Clone the project to your local machine via:
+Clone the project to your local machine via:  
 HTTPS `https://github.com/core-empire/overwatch.git`  
 SSH `git@github.com:core-empire/overwatch.git`  
 
