@@ -30,10 +30,14 @@ If you want to merge local changes on your development branch with the remote `m
 - `git commit -am "My changes I want to go live"` (Commit your changes to the dev branch)
 - `git push origin development` (Pushes your local changes to the remote branch)
 
-After that, go to our GitHub repo and make a pull request to merge `development` into `master`.
+After that, go to our GitHub repo and make a pull request to merge `development` into `master`.  
 
-And if you want to send your build to the live site, do
-- `git subtree push --prefix _site origin gh-pages`
+## Deployment
+If you have changes that need to hit the live site (those that are forward-facing), you'll need to do the following two steps.
+
+- Push and merge your changes with the remote `master` branch (see *Policy*)
+- To push forward-facing changes, use `grunt deploy`
+
 
 ### Warning
-THE CODEBASE SHOULD NEVER ARRIVE TO THE `gh-pages` BRANCH. ONLY THE **JEKYLL BUILD** SHOULD BE ON IT.  
+THE CODEBASE SHOULD NEVER ARRIVE TO THE `gh-pages` BRANCH. USE `grunt deploy` if you want to push your changes live.  
