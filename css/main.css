@@ -275,18 +275,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 21px;
 }
 
-.button-join.button--disabled:after {
-  background: url("../assets/button-arrow-disabled.png") no-repeat;
-}
-
-.button-join.button--disabled:before {
-  background: url("../assets/button-discord-disabled.png") no-repeat;
-}
-
-.button-join.button--disabled:hover {
-  text-indent: -10px;
-}
-
 .button-large {
   -webkit-border-radius: 100px;
   -khtml-border-radius: 100px;
@@ -332,23 +320,6 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: -30px;
   left: 0;
-}
-
-.button--disabled {
-  -webkit-transition: none;
-  -khtml-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
-  border-color: #b0acc7;
-  color: #b0acc7;
-}
-
-.button--disabled:hover {
-  background: transparent;
-  border-color: #b0acc7;
-  color: #b0acc7;
 }
 
 .main-wrapper {

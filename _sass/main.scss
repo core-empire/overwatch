@@ -198,6 +198,20 @@ h1, h2, h3, h4, h5, h6 {
 		top: 50%;
 		width: 21px;
 	}
+
+	&.button--disabled {
+		&:after {
+			background: url('../assets/button-arrow-disabled.png') no-repeat;
+		}
+
+		&:before {
+			background: url('../assets/button-discord-disabled.png') no-repeat;
+		}
+
+		&:hover {
+			text-indent: -10px;
+		}
+	}
 }
 
 .button-large {
@@ -240,6 +254,19 @@ h1, h2, h3, h4, h5, h6 {
 		position: absolute;
 		bottom: -30px;
 		left: 0;
+	}
+}
+
+.button--disabled {
+	@include transition(none);
+
+	border-color: $color-disabled;
+	color: $color-disabled;
+
+	&:hover {
+		background: transparent;
+		border-color: $color-disabled;
+		color: $color-disabled;
 	}
 }
 
