@@ -81,6 +81,14 @@ module.exports = function (grunt) {
         'sass'
     ]);
 
+    // Deploy to GitHub gh-pages (live site)
+    grunt.task.register('deploy', function() {
+        var shell = require('shelljs');
+        shell.exec('git subtree split --prefix _site -b gh-pages');
+        shell.exec('git push -f origin gh-pages:gh-pages');
+        shell.exec('git branch -D gh-pages');
+    });
+
     // Register build as the default task fallback
     grunt.registerTask('default', 'build');
 }
