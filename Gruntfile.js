@@ -82,9 +82,9 @@ module.exports = function (grunt) {
     ]);
 
     // Deploy to GitHub gh-pages (live site)
+    // Please commit any changes before deployment.
     grunt.task.registerTask('deploy', function() {
         var shell = require('shelljs');
-        shell.exec('jekyll build'); // Builds the site off the changes in the working tree
         shell.exec('git subtree split --prefix _site -b gh-pages'); // Creates a local gh-pages branch with the distribution only (_site)
         shell.exec('git push -f origin gh-pages:gh-pages'); // Deletes remote branch and pushes the local branch
         shell.exec('git branch -D gh-pages'); // Removes local gh-pages branch
