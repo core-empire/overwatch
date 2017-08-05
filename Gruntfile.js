@@ -82,7 +82,7 @@ module.exports = function (grunt) {
     ]);
 
     // Deploy to GitHub gh-pages (live site)
-    grunt.task.register('deploy', function() {
+    grunt.task.registerTask('deploy', function() {
         var shell = require('shelljs');
         shell.exec('git subtree split --prefix _site -b gh-pages');
         shell.exec('git push -f origin gh-pages:gh-pages');
