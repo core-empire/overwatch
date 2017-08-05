@@ -12,10 +12,10 @@ Example `git clone https://github.com/core-empire/overwatch.git`
 ## Workflow
 Go to your local repository directory via command line and run
 - `npm install` *this will install the node module dependencies for the project (this only needs to be run once)*
-- `grunt watch` *this will watch the project directory for changes (must be running any time you are working)*
-- `jekyll serve` *this by default will point to 127.0.0.1:4000 (must be running any time you are working)*
+- `grunt serve` 
 
-*When doing development, you should always be running `grunt watch` and `jekyll serve`*  
+The `grunt serve` command will watch the project directory for changes **(and must be running any time you are working)**. It will also spawn up a server at 127.0.0.1:4000.  
+See `Gruntfile.js` for additional tasks and configurations.
 
 --
 
