@@ -1,0 +1,109 @@
+.hero {
+	.callout {
+		color: $color-primary;
+		font-size: $type-scale-massive;
+		line-height: 1.2;
+		padding: 100px 0;
+		text-align: center;
+
+		.callout-offset {
+			position: relative;
+
+			span {
+				color: $color-secondary;
+				font-size: $type-scale-base;
+				font-style: italic;
+				font-weight: 800;
+				letter-spacing: 1px;
+				line-height: 1;
+				position: absolute;
+				text-transform: uppercase;
+			}
+
+			&.callout-offset-bottom {
+				span {
+					bottom: -2px;
+					right: 0;
+				}
+			}
+
+			&.callout-offset-top {
+				span {
+					left: 0;
+					top: -2px;
+				}
+			}
+		}
+
+		span {
+			display: inline-block;
+		}
+	}
+}
+
+.servers {
+	margin: 0 auto;
+	max-width: 580px;
+
+	.server {
+		$padding-top: 60px;
+		padding: $padding-top 180px $padding-top 100px;
+		position: relative;
+
+		&:before {
+			background-repeat: no-repeat;
+			content: '';
+			display: inline-block;
+			left: 0;
+			height: 70px;
+			position: absolute;
+			top: $padding-top + 10;
+			width: 61px;
+		}
+
+		&:after {
+			$size: 250px;
+
+			background-color: $color-divider;
+			bottom: 0;
+			content: '';
+			height: 1px;
+			position: absolute;
+			width: $size;
+			left: 50%;
+			margin-left: -($size / 2);
+		}
+
+		&:last-of-type:after {
+			display: none;
+		}
+
+		&.server--teams:before {
+			background: url('../assets/core-teams.png');
+		}
+
+		&.server--scrim:before {
+			background: url('../assets/core-scrim.png');
+		}
+
+		&.server--league:before {
+			background: url('../assets/core-league.png');
+		}
+
+		h2 {
+			font-size: $type-scale-david;
+			margin-bottom: 10px;
+		}
+
+		.button-wrapper {
+			position: absolute;
+			right: 0;
+			top: $padding-top + 14;
+
+			span {
+				font-size: $type-scale-tiny;
+				font-weight: 600;
+			}
+		}
+	}
+}

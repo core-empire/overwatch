@@ -1,0 +1,47 @@
+.site-nav {
+	border-bottom: 1px solid $color-divider;
+
+	nav {
+		@include clearfix();
+
+		margin: 0 auto;
+		max-width: 860px;
+
+		.logo {
+			float: left;
+		}
+
+		.social {
+			float: right;
+
+			li {
+				padding: 0 8px;
+
+				&:first-of-type {
+					padding-left: 0;
+				}
+
+				&:last-of-type {
+					paddig-right: 0;
+				}
+
+				a {
+					@include transition();
+
+					opacity: 0.4;
+					padding: 10px;
+
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+			li,
+			a {
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+	}
+}

@@ -1,0 +1,114 @@
+.button {
+	$height: 56px;
+
+	@include border-radius(60px);
+	@include transition();
+
+	border-color: $color-primary;
+	border-style: solid;
+	border-width: 2px;
+	color: $color-primary;
+	display: inline-block;
+	font-weight: 600;
+	height: $height;
+	line-height: $height;
+	padding: 0 20px;
+	position: relative;
+	min-width: 150px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: $color-primary;
+		color: white;
+
+		&:after {
+			background: url('../assets/button-arrow-white.png') no-repeat;
+		}
+	}
+
+	&:after {
+		$height: 8px;
+
+		background: url('../assets/button-arrow-color.png') no-repeat;
+		content: '';
+		display: inline-block;
+		height: $height;
+		margin-top: -($height / 2);
+		opacity: 0.7;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		width: 16px;
+	}
+}
+
+.button-join {
+	text-indent: -10px;
+
+	&:hover {
+		text-indent: -7px;
+
+		&:before {
+			background: url('../assets/button-discord-white.png') no-repeat;
+		}
+	}
+
+	&:before {
+		$height: 24px;
+
+		background: url('../assets/button-discord-color.png') no-repeat;
+		content: '';
+		display: inline-block;
+		height: $height;
+		left: 15px;
+		margin-top: -($height / 2) + 2;
+		position: absolute;
+		top: 50%;
+		width: 21px;
+	}
+}
+
+.button-large {
+	@include border-radius(100px);
+
+	border-width: 4px;
+	display: block;
+	height: auto;
+	line-height: 1;
+	padding: 30px 40px;
+	margin: 0 auto;
+	max-width: 340px;
+
+	&:after {
+		right: 30px;
+	}
+
+	span {
+		display: block;
+	}
+
+	.button--text-primary {
+		font-family: $font-secondary;
+		font-size: 17px;
+		font-weight: 800;
+		margin-bottom: 5px;
+	}
+
+	.button--text-secondary {
+		color: $color-primary-vibrant;
+		font-style: italic;
+		text-transform: none;
+	}
+}
+
+.button-wrapper {
+	position: relative;
+	
+	span {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+	}
+}
