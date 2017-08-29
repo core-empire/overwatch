@@ -36,7 +36,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image:
+      image: /assets/brand-image.png
 
 # Jekyll SEO specifications
 logo: /assets/brand-image.png
