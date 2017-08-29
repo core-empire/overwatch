@@ -4,11 +4,46 @@ description: Find or build the Overwatch team team for you.
 baseurl:
 url: http://coreoverwatch.com
 
-dev_environment: false
-typekit: true
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
+keep_files: ['_site/css']
+markdown: kramdown
+
+# Minify CSS
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-livereload
+  - jekyll-extlinks
+  - jekyll-sitemap
+
+livereload: true
+
+extlinks:
+  attributes: {rel: nofollow, target: _blank}
+  rel_exclude: {'coreoverwatch.com'}
 
 google_analytics:
   account: UA-103948438-1
 
-exclude: ['README.md', 'CNAME', 'Gruntfile.js', 'package.json', 'node_modules', 'css', '_scss']
-keep_files: ['_site/css']
+typekit:
+  account: slg0vkd
+  active: true
+
+# Front Matter defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image:
+
+# Jekyll SEO specifications
+logo: /assets/brand-image.png
+social:
+  name: CORE Overwatch
+  links:
+    - https://twitter.com/core_overwatch
+twitter:
+  username: core_overwatch
+google_site_verification:

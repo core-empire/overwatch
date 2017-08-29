@@ -1,0 +1,19 @@
+<title>{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
+
+{% if jekyll.environment == "development" %}
+	<script src="//localhost:35729/livereload.js"></script>
+{% endif %}
+
+{% if site.typekit %}
+	{% include typekit.html %}
+{% endif %}
+
+{% if site.google_analytics %}
+	{% include google_analytics.html %}
+{% endif %}
