@@ -1,5 +1,10 @@
-<title>{{ site.title }}</title>
+<title>
+	{% if page.title %} {{ page.title }}
+	{% else %} {{ site.title }}
+	{% endif %}
+</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width">
 
 <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
 <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">

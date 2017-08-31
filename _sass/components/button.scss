@@ -114,3 +114,25 @@
 		left: 0;
 	}
 }
+
+.button-disabled {
+	border-color: $color-disabled;
+	color: $color-disabled;
+	cursor: default;
+
+	&:before,
+	&:after {
+		color: $color-disabled;
+	}
+
+	&:hover {
+		background-color: inherit;
+		color: $color-disabled;
+		text-indent: -10px;
+
+		&:before,
+		&:after {
+			color: $color-disabled;
+		}
+	}
+}
