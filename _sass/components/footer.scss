@@ -14,4 +14,49 @@
 .footer-divider {
 	display: block;
 	margin: 30px auto 0 auto;
+	position: relative;
+	text-align: center;
+
+	.icon-core-logomark {
+		color: $color-primary;
+		display: inline-block;
+		font-size: 40px;
+		line-height: 1;
+	}
+
+	.divider-handles {
+		$handle-width: 100px;
+
+		display: inline-block;
+		position: absolute;
+		margin-left: -40px;
+		left: 50%;
+
+		span {
+			display: inline-block;
+			position: relative;
+			width: 80px;
+		}
+
+		span:before,
+		span:after {
+			background-color: $color-primary;
+			content: '';
+			display: inline-block;
+			height: 1px;
+			opacity: 0.3;
+			position: absolute;
+			top: 2px;
+			width: $handle-width;
+		}
+
+		span:before {
+			left: -$handle-width;
+		}
+
+
+		span:after {
+			right: -$handle-width;
+		}
+	}
 }

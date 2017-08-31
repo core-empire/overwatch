@@ -4,6 +4,8 @@
 	@include border-radius(60px);
 	@include transition();
 
+	@extend .icon-custom-right-arrow;
+
 	border-color: $color-primary;
 	border-style: solid;
 	border-width: 2px;
@@ -24,49 +26,49 @@
 		color: white;
 
 		&:after {
-			background: url('../assets/button-arrow-white.png') no-repeat;
+			color: white;
 		}
 	}
 
 	&:after {
-		$height: 8px;
+		@include transition();
+		@extend .icon;
 
-		background: url('../assets/button-arrow-color.png') no-repeat;
-		content: '';
+		color: $color-primary;
 		display: inline-block;
-		height: $height;
-		margin-top: -($height / 2);
+		font-size: 17px;
 		opacity: 0.7;
+		margin-top: -7px;
 		position: absolute;
-		right: 20px;
+		right: 15px;
 		top: 50%;
-		width: 16px;
 	}
 }
 
 .button-join {
+	@extend .icon-discord;
+
 	text-indent: -10px;
 
 	&:hover {
 		text-indent: -7px;
 
 		&:before {
-			background: url('../assets/button-discord-white.png') no-repeat;
+			color: white;
 		}
 	}
 
 	&:before {
-		$height: 24px;
+		@include transition(transition 0.2s ease-in-out 0s);
+		@extend .icon;
 
-		background: url('../assets/button-discord-color.png') no-repeat;
-		content: '';
+		color: $color-primary;
+		font-size: 20px;
 		display: inline-block;
-		height: $height;
-		left: 15px;
-		margin-top: -($height / 2) + 2;
+		left: 25px;
+		margin-top: -8px;
 		position: absolute;
 		top: 50%;
-		width: 21px;
 	}
 }
 

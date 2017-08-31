@@ -51,14 +51,16 @@
 		position: relative;
 
 		&:before {
-			background-repeat: no-repeat;
-			content: '';
+			@extend .icon;
+
+			color: $color-primary-vibrant;
 			display: inline-block;
+			font-size: 70px;
 			left: 0;
-			height: 70px;
+			opacity: 0.8;
 			position: absolute;
+			text-indent: -4px;
 			top: $padding-top + 10;
-			width: 61px;
 		}
 
 		&:after {
@@ -78,16 +80,16 @@
 			display: none;
 		}
 
-		&.server--teams:before {
-			background: url('../assets/core-teams.png');
+		&.server--teams {
+			@extend .icon-core-teams;
 		}
 
 		&.server--scrim:before {
-			background: url('../assets/core-scrim.png');
+			@extend .icon-core-scrim;
 		}
 
 		&.server--league:before {
-			background: url('../assets/core-league.png');
+			@extend .icon-core-league;
 		}
 
 		h2 {

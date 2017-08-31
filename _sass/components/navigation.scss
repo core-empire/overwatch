@@ -28,11 +28,29 @@
 				a {
 					@include transition();
 
+					font-size: 22px;
 					opacity: 0.4;
 					padding: 10px;
+					text-decoration: none;
 
+					span {
+						display: none;
+					}
+					
 					&:hover {
 						opacity: 1;
+					}
+
+					&.icon-twitter {
+						font-size: 24px;
+					}
+
+					&.icon-youtube {
+						font-size: 24px;
+					}
+
+					&.icon-patreon {
+						font-size: 20px;
 					}
 				}
 			}
