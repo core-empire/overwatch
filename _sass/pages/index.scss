@@ -1,36 +1,48 @@
 .hero {
 	.callout {
 		color: $color-primary;
-		font-size: $type-scale-massive;
-		line-height: 1.2;
-		padding: 100px 0;
+		
 		text-align: center;
+
+		@include break(sm) {
+			font-size: $type-scale-giant;
+			line-height: 1;
+			padding: 60px 0 40px 0;
+		}
+
+		@include break(md) {
+			font-size: $type-scale-massive;
+			line-height: 1.2;
+			padding: 100px 0;
+		}
 
 		.callout-offset {
 			position: relative;
 
-			span {
-				color: $color-secondary;
-				font-size: $type-scale-base;
-				font-style: italic;
-				font-weight: 800;
-				letter-spacing: 1px;
-				line-height: 1;
-				position: absolute;
-				text-transform: uppercase;
-			}
-
-			&.callout-offset-bottom {
+			@include break(md) {
 				span {
-					bottom: -2px;
-					right: 0;
+					color: $color-secondary;
+					font-size: $type-scale-base;
+					font-style: italic;
+					font-weight: 800;
+					letter-spacing: 1px;
+					line-height: 1;
+					position: absolute;
+					text-transform: uppercase;
 				}
-			}
 
-			&.callout-offset-top {
-				span {
-					left: 0;
-					top: -2px;
+				&.callout-offset-bottom {
+					span {
+						bottom: -2px;
+						right: 0;
+					}
+				}
+
+				&.callout-offset-top {
+					span {
+						left: 0;
+						top: -2px;
+					}
 				}
 			}
 		}
@@ -43,24 +55,63 @@
 
 .servers {
 	margin: 0 auto;
-	max-width: 580px;
+
+	@include break(sm) {
+		max-width: 580px;
+	}
 
 	.server {
-		$padding-top: 60px;
-		padding: $padding-top 180px $padding-top 100px;
 		position: relative;
+
+		@include break(sm) {
+			$padding-top: 30px;
+
+			padding: $padding-top 0 $padding-top 70px;
+
+			& > p {
+				margin-bottom: 20px;
+			}
+
+			&:before {
+				font-size: 50px;
+				top: $padding-top + 10;
+			}
+
+			.button-helper {
+				display: none;
+			}
+		}
+
+		@include break(md) {
+			$padding-top: 60px;
+
+			padding: $padding-top 180px $padding-top 100px;
+
+			&:before {
+				font-size: 70px;
+				top: $padding-top + 10;
+			}
+
+			.button-wrapper {
+				position: absolute;
+				right: 0;
+				top: $padding-top + 14;
+			}
+
+			.button-helper {
+				display: block;
+			}
+		}
 
 		&:before {
 			@extend .icon;
 
 			color: $color-primary-vibrant;
 			display: inline-block;
-			font-size: 70px;
 			left: 0;
 			opacity: 0.8;
 			position: absolute;
 			text-indent: -4px;
-			top: $padding-top + 10;
 		}
 
 		&:after {
@@ -98,10 +149,6 @@
 		}
 
 		.button-wrapper {
-			position: absolute;
-			right: 0;
-			top: $padding-top + 14;
-
 			span {
 				font-size: $type-scale-tiny;
 				font-weight: 600;
