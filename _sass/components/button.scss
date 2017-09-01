@@ -1,0 +1,138 @@
+.button {
+	$height: 56px;
+
+	@include border-radius(60px);
+	@include transition();
+
+	@extend .icon-custom-right-arrow;
+
+	border-color: $color-primary;
+	border-style: solid;
+	border-width: 2px;
+	color: $color-primary;
+	display: inline-block;
+	font-weight: 600;
+	height: $height;
+	line-height: $height;
+	padding: 0 20px;
+	position: relative;
+	min-width: 150px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: $color-primary;
+		color: white;
+
+		&:after {
+			color: white;
+		}
+	}
+
+	&:after {
+		@include transition();
+		@extend .icon;
+
+		color: $color-primary;
+		display: inline-block;
+		font-size: 17px;
+		opacity: 0.7;
+		margin-top: -7px;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+	}
+}
+
+.button-join {
+	@extend .icon-discord;
+
+	text-indent: -10px;
+
+	&:hover {
+		text-indent: -7px;
+
+		&:before {
+			color: white;
+		}
+	}
+
+	&:before {
+		@include transition(transition 0.2s ease-in-out 0s);
+		@extend .icon;
+
+		color: $color-primary;
+		font-size: 20px;
+		display: inline-block;
+		left: 25px;
+		margin-top: -8px;
+		position: absolute;
+		top: 50%;
+	}
+}
+
+.button-large {
+	@include border-radius(100px);
+
+	border-width: 4px;
+	display: block;
+	height: auto;
+	line-height: 1;
+	padding: 30px 40px;
+	margin: 0 auto;
+	max-width: 340px;
+
+	&:after {
+		right: 30px;
+	}
+
+	span {
+		display: block;
+	}
+
+	.button--text-primary {
+		font-family: $font-secondary;
+		font-size: 17px;
+		font-weight: 800;
+		margin-bottom: 5px;
+	}
+
+	.button--text-secondary {
+		color: $color-primary-vibrant;
+		font-style: italic;
+		text-transform: none;
+	}
+}
+
+.button-wrapper {
+	position: relative;
+	
+	span {
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+	}
+}
+
+.button-disabled {
+	border-color: $color-disabled;
+	color: $color-disabled;
+	cursor: default;
+
+	&:before,
+	&:after {
+		color: $color-disabled;
+	}
+
+	&:hover {
+		background-color: inherit;
+		color: $color-disabled;
+		text-indent: -10px;
+
+		&:before,
+		&:after {
+			color: $color-disabled;
+		}
+	}
+}

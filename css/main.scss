@@ -1,12 +1,18 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
 @import "reset";
 @import "config";
+@import "fonts";
 @import "mixins";
 
-@import "_components/navigation";
-@import "_components/footer";
-@import "_components/button";
+@import "components/navigation";
+@import "components/footer";
+@import "components/button";
 
-@import "_pages/index";
+@import "pages/index";
 
 *,
 *:after,
