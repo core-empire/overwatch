@@ -1,0 +1,41 @@
+@mixin chrome--small {
+	.site-nav,
+	.site-footer {
+		padding: 20px 0;
+	}
+}
+
+@include media('<=phone') {
+	@include chrome--small();
+}
+
+@include media('>phone', '<tablet') {
+	@include chrome--small();
+}
+
+.site-nav,
+.site-footer {
+	@include media(">=tablet") {
+		padding: 60px 0;
+	}
+
+	@include media(">=desktop") {
+		max-width: 1200px;
+	}
+}
+
+.main-wrapper {
+	margin: 0 auto;
+	
+	@include media(">phone") {
+		max-width: 740px;
+	}
+}
+
+.site-nav,
+.site-footer,
+.main-wrapper {
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}

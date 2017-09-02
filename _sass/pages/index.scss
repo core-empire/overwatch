@@ -1,16 +1,40 @@
+@mixin index-server--small {
+	$padding-top: 30px;
+
+	padding: $padding-top 0 $padding-top 70px;
+
+	& > p {
+		margin-bottom: 20px;
+	}
+
+	&:before {
+		font-size: 50px;
+		top: $padding-top + 10;
+	}
+
+	.button-helper {
+		display: none;
+	}
+}
+
 .hero {
 	.callout {
 		color: $color-primary;
-		
 		text-align: center;
 
-		@include break(sm) {
+		@include media("<=phone") {
+			font-size: $type-scale-large;
+			line-height: 1;
+			padding: 60px 0 40px 0;
+		}
+
+		@include media(">phone", "<tablet") {
 			font-size: $type-scale-giant;
 			line-height: 1;
 			padding: 60px 0 40px 0;
 		}
 
-		@include break(md) {
+		@include media(">=tablet") {
 			font-size: $type-scale-massive;
 			line-height: 1.2;
 			padding: 100px 0;
@@ -19,7 +43,7 @@
 		.callout-offset {
 			position: relative;
 
-			@include break(md) {
+			@include media(">=tablet") {
 				span {
 					color: $color-secondary;
 					font-size: $type-scale-base;
@@ -56,33 +80,22 @@
 .servers {
 	margin: 0 auto;
 
-	@include break(sm) {
+	@include media(">phone") {
 		max-width: 580px;
 	}
 
 	.server {
 		position: relative;
 
-		@include break(sm) {
-			$padding-top: 30px;
-
-			padding: $padding-top 0 $padding-top 70px;
-
-			& > p {
-				margin-bottom: 20px;
-			}
-
-			&:before {
-				font-size: 50px;
-				top: $padding-top + 10;
-			}
-
-			.button-helper {
-				display: none;
-			}
+		@include media("<=phone") {
+			@include index-server--small();
 		}
 
-		@include break(md) {
+		@include media(">phone", "<tablet") {
+			@include index-server--small();
+		}
+
+		@include media(">=tablet") {
 			$padding-top: 60px;
 
 			padding: $padding-top 180px $padding-top 100px;

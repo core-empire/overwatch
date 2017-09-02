@@ -1,0 +1,58 @@
+<div id="navigation-mobile" class="navigation-mobile">
+	<a href="{{ site.baseurl }}" class="mobile-logo icon-core-logomark" title="CORE Overwatch"></a>
+
+	<div id="navigation-close" class="navigation-close">
+		<span></span>
+	</div>
+
+	<nav>
+		<ul class="social">
+			<li class="twitter">
+				<a href="https://twitter.com/core_overwatch" target="_blank"><span>Twitter</span></a>
+			</li>
+
+			<li class="discord">
+				<a href="https://discord.gg/zMYsKs6" target="_blank"><span>Discord</span></a>
+			</li>
+
+			<li class="twitch">
+				<a href="https://twitch.tv/coreoverwatch" target="_blank"><span>Twitch</span></a>
+			</li>
+
+			<li class="youtube">
+				<a href="https://www.youtube.com/channel/UCKqQFC79QPEwvnU-6SIHcQg" target="_blank"><span>YouTube</span></a>
+			</li>
+
+			<li class="patreon">
+				<a href="https://www.patreon.com/coreoverwatch" target="_blank"><span>Patreon</span></a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<script type="text/javascript">
+	let closeEl = document.getElementById('navigation-close');
+	let hamburger = document.getElementById('hamburger');
+	let navigation = document.getElementById('navigation-mobile');
+
+	function showNavigation() {
+		document.body.scrollTop = 0;
+
+		document.body.classList.remove('nav--hidden');
+		navigation.classList.remove('nav--hide');
+
+		document.body.classList.add('nav--shown');
+		navigation.classList.add('nav--show');
+	}
+
+	function hideNavigation() {
+		document.body.classList.remove('nav--shown');
+		navigation.classList.remove('nav--show');
+
+		document.body.classList.add('nav--hidden');
+		navigation.classList.add('nav--hide');
+	}
+
+	closeEl.addEventListener('click', hideNavigation);
+	hamburger.addEventListener('click', showNavigation);
+</script>
