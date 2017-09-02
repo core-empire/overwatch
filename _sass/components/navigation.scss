@@ -1,19 +1,90 @@
+@mixin site-nav--small() {
+	text-align: center;
+
+	.hamburger {
+		display: inline-block;
+	}
+
+	.logo,
+	.social {
+		display: none;
+	}
+}
+
 .site-nav {
 	border-bottom: 1px solid $color-divider;
+	line-height: 1;
 
 	nav {
 		@include clearfix();
 
 		margin: 0 auto;
 		max-width: 860px;
+		position: relative;
 
-		.logo {
-			float: left;
+		@include media('<=phone') {
+			@include site-nav--small;
+		}
+
+		@include media('>phone', '<tablet') {
+			@include site-nav--small;
+		}
+
+		@include media('>=tablet') {
+			.mobile-logo,
+			.hamburger {
+				display: none;
+			}
+
+			.logo {
+				float: left;
+			}
+
+			.social {
+				float: right;
+			}
+		}
+
+		.mobile-logo {
+			$size: 40px;
+
+			color: $color-primary;
+			font-size: $size;
+			height: $size;
+			text-decoration: none;
+		}
+
+		.hamburger {
+			@include transition();
+
+			cursor: pointer;
+			margin-top: -8px;
+			opacity: 0.6;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 25px;
+
+			span {
+				@include transition();
+
+				background-color: $color-primary;
+				display: block;
+				height: 2px;
+				margin-bottom: 5px;
+				width: 100%;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			&:hover {
+				opacity: 1;
+			}
 		}
 
 		.social {
-			float: right;
-
 			li {
 				padding: 0 8px;
 
@@ -62,4 +133,102 @@
 			}
 		}
 	}
+}
+
+.navigation-mobile {
+	background-color: $color-primary;
+	color: white;
+	font-size: $type-scale-david;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	width: 100%;
+
+	nav {
+		position: relative;
+
+		li {
+			margin-bottom: 20px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.navigation-close {
+		cursor: pointer;
+		position: absolute;
+		right: 20px;
+		top: 30px;
+		height: 26px;
+		width: 26px;
+
+		span {
+			display: block;
+
+			&:before,
+			&:after {
+				background-color: $color-primary-soft;
+				content: '';
+				height: 2px;
+				position: absolute;
+				right: 0;
+				top: 12px;
+				width: 26px;
+			}
+
+
+			&:before {
+				@include rotate(45);
+			}
+
+			&:after {
+				@include rotate(-45);
+			}
+		}
+	}
+
+	.mobile-logo {
+		color: white;
+		font-size: 40px;
+		left: 50%;
+		margin-left: -20px;
+		position: absolute;
+		text-decoration: none;
+		top: 20px;
+	}
+
+	a:not(.mobile-logo) {
+		color: white !important;
+		display: block;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+
+	&.nav--show {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.nav--hide {
+	display: none;
+}
+
+.nav--show {
+	display: block;
+}
+
+.nav--hidden {
+	overflow: auto;
+}
+
+.nav--shown {
+	overflow: hidden;
 }

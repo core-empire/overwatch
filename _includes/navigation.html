@@ -2,25 +2,33 @@
 	<nav class="navigation">
 		<img src="{{ site.baseurl }}/assets/core-logo.png" class="logo" height="50" width="172" alt="CORE Overwatch" />
 
+		<a href="{{ site.baseurl }}" class="mobile-logo icon-core-logomark" title="CORE Overwatch"></a>
+
+		<div id="hamburger" class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+
 		<ul class="social">
 			<li class="twitter">
-				<a class="icon-twitter" href="https://twitter.com/core_overwatch" target="_blank"><span>Twitter</span></a>
+				<a class="icon-twitter" href="https://twitter.com/core_overwatch" target="_blank" onclick="ga('send', 'event', 'Calls to Action', 'Click', 'Twitter');"><span>Twitter</span></a>
 			</li>
 
 			<li class="discord">
-				<a class="icon-discord" href="https://discord.gg/zMYsKs6" target="_blank"><span>Discord</span></a>
+				<a class="icon-discord" href="https://discord.gg/zMYsKs6" target="_blank" onclick="ga('send', 'event', 'Calls to Action', 'Click', 'CORE Teams - Header');"><span>Discord</span></a>
 			</li>
 
 			<li class="twitch">
-				<a class="icon-twitch" href="https://twitch.tv/coreoverwatch" target="_blank"><span>Twitch</span></a>
+				<a class="icon-twitch" href="https://twitch.tv/coreoverwatch" target="_blank" onclick="ga('send', 'event', 'Calls to Action', 'Click', 'Twitch');"><span>Twitch</span></a>
 			</li>
 
 			<li class="youtube">
-				<a class="icon-youtube" href="https://www.youtube.com/channel/UCKqQFC79QPEwvnU-6SIHcQg" target="_blank"><span>YouTube</span></a>
+				<a class="icon-youtube" href="https://www.youtube.com/channel/UCKqQFC79QPEwvnU-6SIHcQg" target="_blank" onclick="ga('send', 'event', 'Calls to Action', 'Click', 'YouTube');"><span>YouTube</span></a>
 			</li>
 
 			<li class="patreon">
-				<a class="icon-patreon" href="https://www.patreon.com/coreoverwatch" target="_blank"><span>Patreon</span></a>
+				<a class="icon-patreon" href="https://www.patreon.com/coreoverwatch" target="_blank" onclick="ga('send', 'event', 'Calls to Action', 'Click', 'Patreon');"><span>Patreon</span></a>
 			</li>
 		</ul>
 	</nav>
