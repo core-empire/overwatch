@@ -30,14 +30,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Find or build the Overwatch team for you." />
 <meta property="og:description" content="Find or build the Overwatch team for you." />
-<link rel="canonical" href="http://coreoverwatch.com/" />
-<meta property="og:url" content="http://coreoverwatch.com/" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="CORE Overwatch" />
-<meta property="og:image" content="http://coreoverwatch.com/assets/brand-image.png" />
+<meta property="og:image" content="http://localhost:4000/assets/brand-image.png" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@core_overwatch" />
 <script type="application/ld+json">
-{"name":"CORE Overwatch","description":"Find or build the Overwatch team for you.","url":"http://coreoverwatch.com/","headline":"CORE Overwatch","dateModified":null,"datePublished":null,"sameAs":["https://twitter.com/core_overwatch"],"@type":"WebSite","author":null,"image":"http://coreoverwatch.com/assets/brand-image.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://coreoverwatch.com/assets/brand-image.png"}},"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":"CORE Overwatch","description":"Find or build the Overwatch team for you.","url":"http://localhost:4000/","headline":"CORE Overwatch","dateModified":null,"datePublished":null,"sameAs":["https://twitter.com/core_overwatch"],"@type":"WebSite","author":null,"image":"http://localhost:4000/assets/brand-image.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/brand-image.png"}},"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -48,14 +48,13 @@
 
 
 	<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-103948438-1']);
-	_gaq.push(['_trackPageview']);
-	(function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-103948438-1', 'auto');
+	ga('send', 'pageview');
 </script>
 
 
@@ -63,7 +62,7 @@
 	<script src="https://use.typekit.net/slg0vkd.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-	</head>
+	<script src="http://127.0.0.1:35729/livereload.js"></script></head>
 	<body>
 		<div class="site-wrapper">
 			<div class="site-nav">
