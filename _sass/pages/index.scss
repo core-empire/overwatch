@@ -23,7 +23,7 @@
 		text-align: center;
 
 		@include media("<=phone") {
-			font-size: $type-scale-large;
+			font-size: $type-scale-medium-large;
 			line-height: 1;
 			padding: 60px 0 40px 0;
 		}
