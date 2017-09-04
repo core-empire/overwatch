@@ -51,6 +51,7 @@
 			color: $color-primary;
 			font-size: $size;
 			height: $size;
+			line-height: $size - 10px; // This is weird. Fix later
 			text-decoration: none;
 		}
 
