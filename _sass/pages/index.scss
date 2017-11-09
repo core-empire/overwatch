@@ -14,18 +14,20 @@
 }
 
 .hero {
+	margin-bottom: 40px;
+
 	.callout {
 		color: $color-primary;
 		text-align: center;
 
 		@include media("<=phone") {
-			font-size: $type-scale-medium-large;
+			font-size: $type-scale-large;
 			line-height: 1;
 			padding: 60px 0 40px 0;
 		}
 
 		@include media(">phone", "<tablet") {
-			font-size: $type-scale-large;
+			font-size: $type-scale-goliath;
 			line-height: 1;
 			padding: 60px 0 40px 0;
 		}
@@ -33,7 +35,7 @@
 		@include media(">=tablet") {
 			font-size: $type-scale-massive;
 			line-height: 1.2;
-			padding: 100px 0;
+			padding: 100px 0 40px 0;
 		}
 	}
 }
