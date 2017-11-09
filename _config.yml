@@ -2,7 +2,7 @@ title: CORE Overwatch
 description: Find or build the Overwatch team team for you.
 
 baseurl:
-url: http://coreoverwatch.com
+url: https://coreoverwatch.com
 
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
 keep_files: ['_site/css']

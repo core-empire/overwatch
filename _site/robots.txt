@@ -1,1 +1,1 @@
-Sitemap: http://coreoverwatch.com/sitemap.xml
+Sitemap: https://coreoverwatch.com/sitemap.xml

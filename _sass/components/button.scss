@@ -79,21 +79,78 @@
 	display: block;
 	height: auto;
 	line-height: 1;
-	padding: 30px 40px;
 	margin: 0 auto;
-	max-width: 340px;
+	text-transform: none;
 
-	&:after {
-		right: 30px;
+	@include media("<=phone") {
+		padding: 20px 10px;
+		max-width: none;
+
+		.button--text-primary {
+			font-size: $type-scale-base;
+		}
+
+		.button--text-secondary {
+			font-size: $type-scale-tiny;
+		}
+
+		&.button-join:before {
+			display: none;
+		}
+	}
+
+	@include media(">phone", "<tablet") {
+		padding: 20px 10px;
+		max-width: 300px;
+
+		.button--text-primary {
+			font-size: $type-scale-david;
+		}
+
+		.button--text-secondary {
+			font-size: $type-scale-base;
+		}
+
+		&.button-join:before {
+			left: 20px;
+		}
+
+		&.button-join {
+			&:before {
+				font-size: 25px;
+				margin-top: -10px;
+				left: 30px;
+			}
+		}
+	}
+
+	@include media(">=tablet") {
+		max-width: 340px;
+		padding: 30px 40px;
+
+		.button--text-primary {
+			font-size: $type-scale-david;
+		}
+
+		&.button-join {
+			&:before {
+				font-size: 30px;
+				margin-top: -12px;
+				left: 40px;
+			}
+		}
 	}
 
 	span {
 		display: block;
 	}
 
+	&:after {
+		right: 30px;
+	}
+
 	.button--text-primary {
 		font-family: $font-secondary;
-		font-size: 17px;
 		font-weight: 800;
 		margin-bottom: 5px;
 	}
@@ -107,7 +164,7 @@
 
 .button-wrapper {
 	position: relative;
-	
+
 	span {
 		position: absolute;
 		bottom: -30px;

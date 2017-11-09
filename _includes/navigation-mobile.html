@@ -31,28 +31,32 @@
 </div>
 
 <script type="text/javascript">
-	let closeEl = document.getElementById('navigation-close');
-	let hamburger = document.getElementById('hamburger');
-	let navigation = document.getElementById('navigation-mobile');
+$(document).ready(function() {
+	let navigation = $('#navigation-mobile');
 
 	function showNavigation() {
-		document.body.scrollTop = 0;
+		$('body')
+			.scrollTop(0)
+			.addClass('nav--shown')
+			.removeClass('nav--hidden');
 
-		document.body.classList.remove('nav--hidden');
-		navigation.classList.remove('nav--hide');
-
-		document.body.classList.add('nav--shown');
-		navigation.classList.add('nav--show');
+		navigation
+			.addClass('nav--show')
+			.removeClass('nav--hide');
 	}
 
 	function hideNavigation() {
-		document.body.classList.remove('nav--shown');
-		navigation.classList.remove('nav--show');
+		$('body')
+			.addClass('nav--hidden')
+			.removeClass('nav--shown');
 
-		document.body.classList.add('nav--hidden');
-		navigation.classList.add('nav--hide');
+		navigation
+			.addClass('nav--hide')
+			.removeClass('nav--show');
 	}
 
-	closeEl.addEventListener('click', hideNavigation);
-	hamburger.addEventListener('click', showNavigation);
+	$('#navigation-close').on('click touch', hideNavigation);
+	$('#hamburger').on('click touch', showNavigation);
+});
+
 </script>
