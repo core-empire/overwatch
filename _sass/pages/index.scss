@@ -11,10 +11,6 @@
 		font-size: 50px;
 		top: $padding-top + 10;
 	}
-
-	.button-helper {
-		display: none;
-	}
 }
 
 .hero {
@@ -38,41 +34,6 @@
 			font-size: $type-scale-massive;
 			line-height: 1.2;
 			padding: 100px 0;
-		}
-
-		.callout-offset {
-			position: relative;
-
-			@include media(">=tablet") {
-				span {
-					color: $color-secondary;
-					font-size: $type-scale-base;
-					font-style: italic;
-					font-weight: 800;
-					letter-spacing: 1px;
-					line-height: 1;
-					position: absolute;
-					text-transform: uppercase;
-				}
-
-				&.callout-offset-bottom {
-					span {
-						bottom: -2px;
-						right: 0;
-					}
-				}
-
-				&.callout-offset-top {
-					span {
-						left: 0;
-						top: -2px;
-					}
-				}
-			}
-		}
-
-		span {
-			display: inline-block;
 		}
 	}
 }
@@ -98,7 +59,7 @@
 		@include media(">=tablet") {
 			$padding-top: 60px;
 
-			padding: $padding-top 180px $padding-top 100px;
+			padding: $padding-top 0 $padding-top 100px;
 
 			&:before {
 				font-size: 70px;
@@ -159,13 +120,6 @@
 		h2 {
 			font-size: $type-scale-david;
 			margin-bottom: 10px;
-		}
-
-		.button-wrapper {
-			span {
-				font-size: $type-scale-tiny;
-				font-weight: 600;
-			}
 		}
 	}
 }
